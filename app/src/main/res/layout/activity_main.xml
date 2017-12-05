@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#d1a2a2"
+    tools:context="com.example.mragavendra.booksapp.MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <EditText
+            android:id="@+id/SearchET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="44dp"/>
+
+        <Button
+            android:id="@+id/Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/SearchET"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="37dp"
+            android:onClick="SearchBooks"
+            android:text="Click to Search"/>
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/Author"
+            android:layout_alignRight="@+id/Author"
+            android:layout_below="@+id/Search"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="49dp"
+            android:hint="State"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+        <TextView
+            android:id="@+id/Title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Title"
+            android:layout_alignBottom="@+id/Title"
+            android:layout_toEndOf="@+id/Search"
+            android:layout_toRightOf="@+id/Search"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+        <TextView
+            android:id="@+id/Author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Search"
+            android:layout_marginLeft="26dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="152dp"
+            android:hint="Mobile"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+        <TextView
+            android:id="@+id/Author1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Author"
+            android:layout_alignBottom="@+id/Author"
+            android:layout_alignLeft="@+id/Title1"
+            android:layout_alignStart="@+id/Title1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/Title1"
+            android:layout_alignLeft="@+id/Title1"
+            android:layout_alignStart="@+id/Title1"
+            android:elevation="20dp"
+            android:text="Toggle"
+            android:theme="@style/ToggleButton"/>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Author"
+            android:layout_marginLeft="34dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="38dp"
+            android:background="@color/colorPrimary"
+            android:onClick="ShareApp"
+            app:srcCompat="@android:drawable/ic_menu_share"
+            />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageButton"
+            android:layout_alignEnd="@+id/Author1"
+            android:layout_alignRight="@+id/Author1"
+            android:onClick="CallCustomerCare"
+            app:srcCompat="@android:drawable/ic_menu_call"/>
+
+        <com.jackandphantom.customtogglebutton.CustomToggle
+            android:id="@+id/custom"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            app:ctg_addAnimationType="jack_animation"
+            app:ctg_addLeftIcon="@drawable/ic_left_icon"
+            app:ctg_addRightIcon="@drawable/ic_right_icon"
+            app:ctg_addSlideBackgroundColor="#6c817a"
+            app:ctg_addSlideColor="#ff67"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>

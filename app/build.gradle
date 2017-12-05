@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.example.mragavendra.booksapp"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        config {
+            /*  keyAlias 'sharemobile_keystore'
+            keyPassword 'd0not$hare'
+            storeFile file('D:/AndroidKeyStore/sharemobile_keystore.jks')
+            storePassword 'd0not$hare'*/
+            keyAlias 'UEkey'
+            keyPassword KEYSTORE_PASSWORD
+            storeFile file('C:/RAGAV/Working Files/UserExperiorEnabled.jks')
+            storePassword KEY_PASSWORD
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.code.gson:gson:2.8.1'
+    compile 'com.jackandphantom.android:customtogglebutton:1.0.0'
+    compile 'com.xenione.libs:accordion:1.0.1'
+    //    compile 'am.appwise.components:NoInternetDialog:1.0.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+}
